@@ -1,18 +1,23 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className='footer-container'>
+  <div className='footer-container'>
+    <div className='footer-topcontainer'>
       <section className='footer-subscription'>
+        <div class='footer-logo'>
+            <Link to='/' className='social-logo'>
+            <img src="images/cherilives1.png" className='logos' alt=''/>
+            </Link>
+        </div>
         <p className='footer-subscription-heading'>
-          THANK YOU FOR VISITING OUR WEBSITE
+          Be an inspiration for changes! A helping hand for a hoping heart.
         </p>
-        <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
-        </p>
+        <h2 className='footer-subscription-text'>
+          Subscribe Us
+        </h2>
         <div className='input-areas'>
           <form>
             <input
@@ -21,53 +26,39 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <button className='subscribe'>
+              <img src='images/icon-right.png' className='iconbtn' alt=''/>
+            </button>
           </form>
         </div>
       </section>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <h2>Legal Information</h2>
+            <Link to='/sign-up'>Privacy Policy Terms and Conditions</Link>
           </div>
           <div class='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <h2>Quick Links</h2>
+            <Link to='/'>Home</Link>
+            <Link to='/about-us'>About Us</Link>
+            <Link to='/services'>Services</Link>
+            <Link to='/contact'>Contacts</Link>
           </div>
-        </div>
-        <div className='footer-link-wrapper'>
+        
           <div class='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
-          </div>
-          <div class='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <h2>Get Involved</h2>
+            <Link to='/'>Be a Volunteer</Link>
+            <Link to='/'>Send Donations</Link>
+            <Link to='/'>Media</Link>
           </div>
         </div>
       </div>
+    </div>
+
+    <div className='footer-bottomcontainer'>
       <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-            <img src="images/logo.png" className='logo-1' alt=''/>
-            </Link>
-          </div>
-          <small class='website-rights'>Passion for Giving © 2023</small>
+        <div className='social-media-wrap'>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
@@ -101,18 +92,16 @@ function Footer() {
             >
               <i class='bx bxl-twitter'/>
             </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='bx bxl-linkedin-square'/>
-            </Link>
+        
           </div>
+        </div>
+        <hr/>
+        <div class='copyright-notice'>
+          <small class='website-rights'>copyright 2023 © | All rights reserved</small>
         </div>
       </section>
     </div>
+  </div>
   );
 }
 

@@ -1,6 +1,17 @@
 import React from 'react';
 import '../../App.css';
+import Regardingweb from '../Homepages/Regardingweb';
+import Ourmission from '../Homepages/Ourmission';
+import Footer from '../Footer'
 
-export default function Aboutus() {
-    return <h1 className='aboutus'>ABOUT US</h1>
+function Aboutus() {
+    return (
+        <>
+            <Regardingweb/>
+            <Ourmission/>
+            <Footer/>
+        </>
+    ); 
 }
+
+export default Aboutus

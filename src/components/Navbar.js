@@ -30,7 +30,7 @@ function Navbar() {
         <div className='navbar-container'>
 
           <Link to='/' className='nav-logo' onClick={closeMobileMenu}>
-          <img src="images/logo.png" className='logo' alt=''/>
+          <img src="images/cherilives.png" className='logo' alt=''/>
           </Link>
 
           <div className='menu-icon' onClick={handleClick}>
@@ -79,11 +79,13 @@ function Navbar() {
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
-                Login
+                Sign In
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'> LOGIN</Button>}
+          <div className='btn-signin'>
+            {button && <Button buttonStyle='btn--outline' buttonSize='btn--signup'> Sign In</Button>}
+          </div>
         </div>
       </nav>
     </>
